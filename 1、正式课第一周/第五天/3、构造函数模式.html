@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function createPerson(name,age) {
+        var obj = {};
+        obj.name = name;
+        obj.age =age;
+        return obj;
+    }
+    createPerson("王林",18);
+    function CreatePerson(name,age){
+        // 自己创建一个对象，也就是我们的实例
+        this.name = name;
+        this.age = age;
+        //浏览器把对象默认的返回
+    }
+    var people1 = new CreatePerson("王林",18);
+
+
+   // 构造函数与工厂模式的区别
+//  普通函数执行
+    // 构造函数通过new 以后，就变成一个类了，函数返回值就是我们的一个实例
+
+    // 相同点
+    //函数执行都是形成一个私有作用域--》形参赋值--》与解释--》代码从上到下执行
+//  这里类和普通函数一样，有普通函数的额一面
+// 不同 ：
+    // 代码执行之前，浏览器默认创建一个对象，这个对象就是我们的实例
+    // 代码从上到下执行，以当前实例为执行主体，（this是指当前的实例)，然后把属性名属性值赋给我们的实例
+    // 最后把实例返回
+
+    // js中所有的类都是函数数据类型的，new 之后变成一个类，本身是个函数
+    // 实例都是对象数据类型的
+    // 在构造函数模式中，函数中的this,指代当前的实例
+    // 创建的实例与实例之间，属性或方法是不一样的
+
+
+
+
+
+
+</script>
+</body>
+</html>
